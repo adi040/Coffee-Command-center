@@ -299,7 +299,6 @@ async def update_menu_item_api(
     if db_item is None:
         raise HTTPException(status_code=404, detail="Menu item not found")
     return db_item
-
 @app.delete("/api/menu/{item_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_menu_item_api(
     item_id: str,
